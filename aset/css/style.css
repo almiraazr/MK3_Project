@@ -1,0 +1,244 @@
+:root {
+  --primary-color: #d9c3a9;
+  --secondary-color: #a68865;
+  --white-color: #f3eee8;
+  --black-color: #443e37;
+}
+
+body {
+  font-family: "josefin sans", serif;
+  background-color: var(--white-color);
+  color: var(--black-color);
+}
+
+.container {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 1rem 7%;
+}
+
+.header {
+  background-color: var(--secondary-color);
+  nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 3rem;
+    padding: 2rem;
+    a {
+      font-size: 1.5rem; /* 20px */
+      font-weight: 600;
+      color: var(--white-color);
+    }
+  }
+}
+
+.home {
+  height: 100vh;
+  display: flex;
+  background: url("../img/bg.png");
+  background-position: center; /* center the image */
+  background-repeat: no-repeat; /* do not repeat the image */
+  background-size: cover;
+
+  .container {
+    width: 100%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+
+    .headline {
+      padding: 1rem;
+      width: 600px;
+      margin-bottom: 2rem;
+      backdrop-filter: blur(1rem);
+
+      h1 {
+        font-size: 3rem; /* 48px */
+        line-height: 1;
+        font-style: italic;
+        font-weight: 700;
+        font-family: "lora";
+      }
+      p {
+        font-size: 1.25rem; /* 20px */
+        mix-blend-mode: difference;
+        opacity: 0.5;
+      }
+    }
+
+    .buttons {
+      display: flex;
+      gap: 1rem;
+
+      button {
+        padding: 1rem 2rem;
+        font-size: 1rem;
+        font-weight: 600;
+        color: var(--white-color);
+        border: none;
+        background-color: var(--secondary-color);
+      }
+    }
+
+    .image {
+      width: 444px;
+      aspect-ratio: 1/1;
+      overflow: clip;
+      border-radius: 999px;
+      box-shadow: 0px 0px 0px 26px var(--primary-color);
+
+      img {
+        width: 100%;
+        aspect-ratio: 1/1;
+        object-fit: cover;
+      }
+    }
+  }
+}
+
+.menu {
+  margin: 2rem 0;
+  background-color: var(--primary-color);
+  border-radius: 20px;
+
+  h2 {
+    font-family: "lora";
+    font-size: 3rem;
+    font-weight: 600;
+    padding: 1rem 0;
+  }
+
+  .raw-items {
+    display: grid;
+    gap: 3rem;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+
+    .item {
+      width: 100%;
+      border-radius: 20px;
+
+      h3 {
+        text-align: center;
+        font-size: 1.25rem; /* 20px */
+        line-height: 1.75rem; /* 28px */
+        font-weight: 600;
+      }
+      .item-image {
+        position: relative;
+        overflow: clip;
+        border-radius: 20px;
+
+        img {
+          width: 100%;
+          object-fit: cover;
+        }
+        p {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          height: 3rem;
+          aspect-ratio: 1 / 1;
+          background-color: var(--white-color);
+          border-radius: 999px;
+          position: absolute;
+          bottom: 20px;
+          left: 10px;
+        }
+      }
+    }
+  }
+}
+
+.about {
+  margin: 5rem 0;
+
+  .container {
+    .image {
+      position: absolute;
+      width: 444px;
+      aspect-ratio: 1/1;
+      overflow: clip;
+      border-radius: 999px;
+      box-shadow: -1rem 1rem 0px 1.25rem var(--secondary-color);
+
+      img {
+        width: 100%;
+        object-fit: cover;
+      }
+    }
+
+    .headline {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      height: 444px;
+      margin-left: 15%;
+      padding-left: 25%;
+      border-radius: 2rem;
+      background-color: var(--primary-color);
+
+      h2 {
+        font-family: "lora";
+        font-size: 3rem;
+        font-weight: 600;
+        padding: 1rem 0;
+      }
+
+      p {
+        width: 80%;
+        font-size: 1.5rem;
+        opacity: 0.8;
+      }
+    }
+  }
+}
+
+.place {
+  margin: 2rem 0;
+  padding: 2rem;
+  background-color: var(--primary-color);
+
+  h2 {
+    font-family: "lora";
+    text-align: center;
+    font-size: 3rem;
+    font-weight: 600;
+    padding: 1rem 0;
+  }
+
+  .container {
+    display: flex;
+    gap: 5rem;
+
+    div {
+      width: 50%;
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+
+      div {
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+        img {
+          height: 2rem;
+          width: 2rem;
+          object-fit: cover;
+          overflow: clip;
+        }
+        p {
+          font-size: 1.25rem; /* 20px */
+          line-height: 1.75rem; /* 28px */
+        }
+      }
+    }
+  }
+}
+
+footer {
+  text-align: center;
+  font-family: "lora";
+  font-size: 1rem;
+  padding: 1rem 0 3rem;
+}
